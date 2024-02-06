@@ -1,4 +1,6 @@
+
 const loginFormElement = document.forms.login;
+const loginid = document.getElementById("loginid");
 const registrationFormElement = document.forms.registrationForm;
 const messageContainer = document.querySelector(".message-container");
 const messageText = document.querySelector(".message-text");
@@ -24,23 +26,28 @@ messageCancelButton.addEventListener("click", () => {
     hideMessage();
 });
 
-loginFormElement.addEventListener("submit", (event) => {
-    event.preventDefault(); // Prevent default form submission
 
+
+function validateLogin()
+{
     const username = loginFormElement.elements.username.value;
     const password = loginFormElement.elements.password.value;
 
     if(username === "" || username.length < 6) {
         showMessage("Invalid username!! Username must be at least 6 characters.");
+        return false;
     } else if(password.length < 8) {
         showMessage("Invalid password!! Password must be at least 8 characters.");
+        return false;
     } else if(!passwordRegEx.test(password)) {
         showMessage("Invalid password!! Password must contain only 0-9, a-z, A-Z, @ and _");
+        return false;
     } else {
         showMessage("Submitted successfully.");
         loginFormElement.reset(); // Reset form fields after successful submission
+        return true;
     }
-});
+};
 
 registrationFormElement.addEventListener("submit", (event) => {
     event.preventDefault(); // Prevent default form submission

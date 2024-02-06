@@ -10,7 +10,7 @@
 <body>
   <h1>Login Page</h1>
   <div class="loginpage">
-    <form name="login" method="post" onsubmit="return validateForm()">
+    <form name="login" method="post" onsubmit="return validateLogin()">
       <label for="uname">Username:</label><br>
       <input type="text" id="uname" name="uname" placeholder="Enter Username" required><br>
       <span id="usernameError" class="error"></span><br>
@@ -19,7 +19,7 @@
       <input type="password" id="psw" name="psw" placeholder="Enter Password" required><br>
       <span id="passwordError" class="error"></span><br>
       
-      <button type="submit">Login</button>
+      <input id = "loginid"type="submit"></input>
     </form>
   </div>
 </body>
