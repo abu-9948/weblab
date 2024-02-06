@@ -1,0 +1,68 @@
+.loginpage {
+  input[type="text"],
+  input[type="password"] {
+    background-color: #AC7D88;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    margin-left: 5px;
+    border-color: black;
+    border-radius: 10px;
+    height: 2em;
+    width: 25em;
+  }
+  ::placeholder {
+    color: aliceblue;
+  }
+  button {
+    transition-duration: 0.2s;
+    background-color: black;
+    color: white;
+    height: 2em;
+    width: 7em;
+    border-radius: 12px;
+    font-size: medium;
+  }
+  button:hover {
+    background-color: rgb(15, 201, 46);
+    color: black;
+    font-weight: 400;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+}
+
+.Up {
+  body {
+    background-color: white;
+  }
+  input[type="text"],
+  input[type="date"],
+  input[type="password"] {
+    background-color: rgb(89, 118, 215);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-color: black;
+    border-radius: 10px;
+    height: 2em;
+    width: 20em;
+  }
+  ::placeholder {
+    color: whitesmoke;
+  }
+  button {
+    background-color: black;
+    color: white;
+    height: 2em;
+    width: 7em;
+    border-radius: 12px;
+    font-size: medium;
+    transition-duration: 0.2s;
+    margin-top: 15px;
+  }
+  button:hover {
+    background-color: rgb(29, 175, 92);
+    color: black;
+  }
+  label {
+    font-size: large;
+  }
+}
