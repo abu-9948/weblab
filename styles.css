@@ -9,11 +9,12 @@
     border-radius: 10px;
     height: 2em;
     width: 25em;
+    font-size: medium;
   }
   ::placeholder {
     color: aliceblue;
   }
-  button {
+  #loginid {
     transition-duration: 0.2s;
     background-color: black;
     color: white;
@@ -33,6 +34,7 @@
 .Up {
   body {
     background-color: white;
+    
   }
   input[type="text"],
   input[type="date"],
@@ -66,3 +68,28 @@
     font-size: large;
   }
 }
+
+.message-container {
+  position: relative;
+  margin: 2% 15% 0px 25%;
+  padding: 10px 20px;
+  background-color:antiquewhite;
+  border-radius: 12px;
+  visibility: hidden;
+}
+
+.message-text {
+  display:flex;
+}
+
+.cancel-btn {
+  padding: 5px;
+  border-radius: 50%;
+  border: none;
+  background-color: rgb(228, 23, 23);
+  margin: 20px;
+
+  color: #EEEEEE;
+}
+
+

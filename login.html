@@ -5,22 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login Page</title>
   <link rel="stylesheet" href="styles.css">
-  <script src="./index.js" defer></script>
+ 
 </head>
 <body>
-  <h1>Login Page</h1>
+  <h1 style="text-align: center;">Login Page</h1>
+  
   <div class="loginpage">
+    <div class="message-container">
+      <h3 class="message-text">message</h3>
+      <button type ="cancel-btn">X</button>
+  </div>
     <form name="login" method="post" onsubmit="return validateLogin()">
-      <label for="uname">Username:</label><br>
+      <label style = "font-size: x-large"for="uname">Username:</label><br>
       <input type="text" id="uname" name="uname" placeholder="Enter Username" required><br>
       <span id="usernameError" class="error"></span><br>
 
-      <label for="psw">Password:</label><br>
+      <label style = "font-size: x-large;"for="psw">Password:</label><br>
       <input type="password" id="psw" name="psw" placeholder="Enter Password" required><br>
       <span id="passwordError" class="error"></span><br>
       
-      <input id = "loginid"type="submit"></input>
+      <input id = "loginid" type="submit"></input>
     </form>
   </div>
+  <script src="./index.js" defer></script>
 </body>
 </html>

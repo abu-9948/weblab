@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,42 +19,52 @@
 <body>
   <h1>Sign Up</h1>
   <div class="Up">
-    <label for="name"><b>Name</b></label><br>
-    <input type="text" id="name" placeholder="Enter Name" name="name" required><br>
+
+    <div class="loginpage">
+      <div class="message-container">
+        <h3 class="message-text">message</h3>
+        <button class="cancel-btn">X</button>
+    </div>
+    <form name="registration" method="post" onsubmit="return validateForm2()">
+    <label for="username"><b>Name</b></label><br>
+    <input type="text" id="name" placeholder="Enter Name" name="username" required><br>
 
     <label for="DOB"><b>Date of birth</b></label><br>
-    <input type="date" id="DOB" placeholder="Select date" name="date" required><br>
+    <input type="date" id="DOB" placeholder="Select date" name="dob" ><br>
 
     <label for="gender"><b>Gender</b></label><br>
     <label for="gender-m">
-      <input type="radio" id="gender-m" value="Male" name="pick-gender" required>
+      <input type="radio" id="gender-m" value="Male" name="pick-gender" >
       <b>Male</b>
     </label>
     <label for="gender-f">
-      <input type="radio" id="gender-f" value="Female" name="pick-gender" required>
+      <input type="radio" id="gender-f" value="Female" name="pick-gender" >
       <b>Female</b>
     </label><br>
 
     <label for="age"><b>Age</b></label><br>
-    <input type="text" id="age" placeholder="Enter age" required><br>
+    <input type="text" id="age" name = "age"placeholder="Enter age" ><br>
 
     <label for="phn-num"><b>Mobile Number</b></label><br>
-    <input type="text" id="phn-num" placeholder="Enter mobile number" required><br>
+    <input type="text" id="phn-num" name = "mobile"placeholder="Enter mobile number" ><br>
 
     <label for="address"><b>Address</b></label><br>
-    <input type="text" id="address" class="address" placeholder="Enter address" required><br>
+    <input type="text" id="address" class="address" name = "address"placeholder="Enter address" ><br>
 
     <label for="email"><b>Email</b></label><br>
-    <input type="text" id="email" placeholder="Enter Email" name="email" required><br>
+    <input type="text" id="email" placeholder="Enter Email" name="email" ><br>
 
     <label for="password"><b>Password</b></label><br>
-    <input type="password" id="password" placeholder="Enter Password" required><br>
+    <input type="password" id="password" name = "password"placeholder="Enter Password" required><br>
 
     <label for="password-repeat"><b>Re-enter password</b></label><br>
-    <input type="password" id="password-repeat" placeholder="Re-enter password" required><br>
+    <input type="password" id="password-repeat" name = "cpassword"placeholder="Re-enter password" ><br>
 
     <span id="error-message" class="error"></span><br>
-    <button type="button" onclick="validateForm2()">Submit</button><br>
+    <button type="submit" >Submit</button><br>
+ 
+  </form>
   </div>
 </body>
 </html>
+

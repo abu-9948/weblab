@@ -1,7 +1,7 @@
 
 const loginFormElement = document.forms.login;
 const loginid = document.getElementById("loginid");
-const registrationFormElement = document.forms.registrationForm;
+const registrationFormElement = document.forms.registration;
 const messageContainer = document.querySelector(".message-container");
 const messageText = document.querySelector(".message-text");
 const messageCancelButton = document.querySelector(".cancel-btn");
@@ -30,8 +30,8 @@ messageCancelButton.addEventListener("click", () => {
 
 function validateLogin()
 {
-    const username = loginFormElement.elements.username.value;
-    const password = loginFormElement.elements.password.value;
+    const username = loginFormElement.uname.value;
+    const password = loginFormElement.psw.value;
 
     if(username === "" || username.length < 6) {
         showMessage("Invalid username!! Username must be at least 6 characters.");
@@ -49,28 +49,41 @@ function validateLogin()
     }
 };
 
-registrationFormElement.addEventListener("submit", (event) => {
-    event.preventDefault(); // Prevent default form submission
 
-    const username = registrationFormElement.elements.username.value;
-    const password = registrationFormElement.elements.password.value;
-    const cpassword = registrationFormElement.elements.cpassword.value;
-    const email = registrationFormElement.elements.email.value;
-    const mobile = registrationFormElement.elements.mobile.value;
-    const dob = registrationFormElement.elements.dob.value;
+    
 
-    if(!usernameRegEx.test(username)) {
-        showMessage("Invalid username!! Username must be at least 6 characters and should begin with digits.");
-    } else if(!passwordRgx.test(password)) {
-        showMessage("Invalid password!! Password must contain at least one 0-9, at least one a-z, at least one A-Z, at least one @ and _, and at least of size 8.");
-    } else if(cpassword !== password) {
-        showMessage("Confirm password and password must be the same.");
-    } else if(!emailRegEx.test(email)) {
-        showMessage("Invalid Email!!");
-    } else if(!mobileRegEx.test(mobile)) {
-        showMessage("Invalid mobile number!!");
-    } else {
-        showMessage("Registered Successfully.");
-        registrationFormElement.reset(); // Reset form fields after successful registration
-    }
-});
+function validateForm2()
+{
+
+  
+  const username = registrationFormElement.username.value;
+    const password = registrationFormElement.password.value;
+    const cpassword = registrationFormElement.cpassword.value;
+    const email = registrationFormElement.email.value;
+    const mobile = registrationFormElement.mobile.value;
+    const dob = registrationFormElement.dob.value;
+
+  if(!usernameRegEx.test(username)) {
+    showMessage("Invalid username!! Name must be at least 6 characters and should begin with capitals.");
+    return false;
+} else if(!passwordRgx.test(password)) {
+    showMessage("Invalid password!! Password must contain at least one 0-9, at least one a-z, at least one A-Z, at least one @ and _, and at least of size 8.");
+    return false;
+} else if(cpassword !== password) {
+    showMessage("Confirm password and password must be the same.");
+    return false;
+} else if(!emailRegEx.test(email)) {
+    showMessage("Invalid Email!!");
+    return false;
+} else if(!mobileRegEx.test(mobile)) {
+    showMessage("Invalid mobile number!!");
+    return false;
+} else {
+    showMessage("Registered Successfully.");
+    registrationFormElement.reset(); 
+}
+return true;
+}
+    
+    
+
